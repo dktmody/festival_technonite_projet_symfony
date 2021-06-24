@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArtisteController!{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center mt-5 mb-5" >
+    <button type="button" class="btn btn-outline-primary m-1">Mélodique</button>
+    <button type="button" class="btn btn-outline-secondary m-1">Industrielle</button>
+    <button type="button" class="btn btn-outline-success m-1">Groovy</button>
+    <button type="button" class="btn btn-outline-info m-1">Deep</button>
+    <button type="button" class="btn btn-outline-warning m-1">Detroit</button>
+</div>
+
+<div class="row">
+{% for i in 1 ..15 %}
+    <div class="col-4">
+        <div class="card border-secondary mb-3" >
+            <div class="card-body">
+                <h4 class="card-title">Artiste n°{{i}}</h4>
+                <p class="card-text">Lorem necessitatibus soluta adipisci impedit laudantium iste amet architecto eos tempore est obcaecati dolore? Harum laudantium omnis, obcaecati cum ullam similique.</p>
+
+            </div>
+        </div>  
+     </div>
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+{% endblock %}
