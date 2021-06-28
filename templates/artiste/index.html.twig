@@ -5,16 +5,16 @@
 {% block body %}
     <div class="d-flex justify-content-center mt-5 mb-5" >
         {% for categorie in categories %}      
-            <button type="button" class="btn btn-outline-primary m-1">{{categorie.name}}</button>
+            <button type="button" class="btn btn-outline-{{categorie.color}} m-1">{{categorie.name}}</button>
         {% endfor %}
     </div>
 
 <div class="row">
-{% for categorie in categories %}
+
 {% for artiste in artistes %}
 
     <div class="col-4">
-        <div class="card border-{{categorie.id}} mb-3" >
+        <div class="card border-{{artiste.category.color}} mb-3" >
             <div class="card-body">
                 <div class="card-header text-end"><span class="badge rounded-pill bg-secondary">Music de rue</span></div>
                 <h4 class="card-title">DJ {{artiste.name}}</h4>
@@ -24,7 +24,7 @@
         </div>  
      </div>
 {% endfor %}
-{% endfor %}
+
 
 </div>
 

@@ -18,9 +18,12 @@ class ArtisteController extends AbstractController
         $categories = $categorieRepository->findAll();
         $artistes = $artisteRepository->findAll();
         
+        // dd($artistes);
         return $this->render('artiste/index.html.twig', [
             'categories' => $categories,
             'artistes' => $artistes,
         ]);
     }
+
+    
 }
