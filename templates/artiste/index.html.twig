@@ -4,22 +4,26 @@
 
 {% block body %}
     <div class="d-flex justify-content-center mt-5 mb-5" >
-    {% for categorie in categories %}      
-        <button type="button" class="btn btn-outline-primary m-1">{{categorie.name}}</button>
-    {% endfor %}
-</div>
+        {% for categorie in categories %}      
+            <button type="button" class="btn btn-outline-primary m-1">{{categorie.name}}</button>
+        {% endfor %}
+    </div>
 
 <div class="row">
-{% for i in 1 ..15 %}
-    <div class="col-4">
-        <div class="card border-secondary mb-3" >
-            <div class="card-body">
-                <h4 class="card-title">Artiste n°{{i}}</h4>
-                <p class="card-text">Lorem necessitatibus soluta adipisci impedit laudantium iste amet architecto eos tempore est obcaecati dolore? Harum laudantium omnis, obcaecati cum ullam similique.</p>
+{% for categorie in categories %}
+{% for artiste in artistes %}
 
+    <div class="col-4">
+        <div class="card border-{{categorie.id}} mb-3" >
+            <div class="card-body">
+                <div class="card-header text-end"><span class="badge rounded-pill bg-secondary">Music de rue</span></div>
+                <h4 class="card-title">DJ {{artiste.name}}</h4>
+                <p class="card-text">{{artiste.description | slice(1, 100)}}</p>
+                <p><a href="#">Découvrir l'artiste</a></p>
             </div>
         </div>  
      </div>
+{% endfor %}
 {% endfor %}
 
 </div>

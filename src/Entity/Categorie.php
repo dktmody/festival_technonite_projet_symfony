@@ -24,10 +24,10 @@ class Categorie
      */
     private $name;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $color;
+    // /**
+    //  * @ORM\Column(type="string", length=255)
+    //  */
+    // private $color;
 
     /**
      * @ORM\OneToMany(targetEntity=Artiste::class, mappedBy="category")
@@ -56,17 +56,17 @@ class Categorie
         return $this;
     }
 
-    public function getColor(): ?string
-    {
-        return $this->color;
-    }
+    // public function getColor(): ?string
+    // {
+    //     return $this->color;
+    // }
 
-    public function setColor(string $color): self
-    {
-        $this->color = $color;
+    // public function setColor(string $color): self
+    // {
+    //     $this->color = $color;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     /**
      * @return Collection|Artiste[]
