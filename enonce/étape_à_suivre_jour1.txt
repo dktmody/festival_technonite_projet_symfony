@@ -1,0 +1,16 @@
+création controller technoController.
+modifier la route, le nom de la fonction index en home, 
+dans le render je crée un fichier techno dans le quel je fait pointer mon controller Techno.
+et ce fichier se nommera techno/home.html.twig.
+
+Partir prendre le template sur bootswatch.
+
+2) 
+branch authentication
+faire login, logout et register
+s'aider du fichier de Philippe
+
+
+
+*********************Les commandes*****************************
+symfony console make:controller [Nom]  , la console va créer NomController
