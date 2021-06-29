@@ -17,8 +17,18 @@ class ArtisteController extends AbstractController
     {
         $categories = $categorieRepository->findAll();
         $artistes = $artisteRepository->findAll();
+        $categoryColorName = [
+            'Mélodique' => 'primary',
+            'Industrielle' => 'secondary',
+            'Groovy' => 'success',
+            'Deep' => 'info',
+            'Détroit' => 'warning',
+        ];
+        foreach($categories as $category){
+            $category->color = $categoryColorName[$category->getName()];
+        }
         
-        // dd($artistes);
+        // dd($categories);
         return $this->render('artiste/index.html.twig', [
             'categories' => $categories,
             'artistes' => $artistes,

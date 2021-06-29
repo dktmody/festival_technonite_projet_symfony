@@ -28,7 +28,7 @@ class CategoryFixtures extends Fixture
                     ->setDescription($faker->text())
                     ->setCategory($category)
                     ->setConcert($concert);
-                    ;
+                    
                 $manager->persist($artiste);
             }
         }
