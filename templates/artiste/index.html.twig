@@ -5,7 +5,8 @@
 {% block body %}
     <div class="d-flex justify-content-center mt-5 mb-5" >
         {% for categorie in categories %}      
-            <button type="button" class="btn btn-outline-{{categorie.color}} m-1">{{categorie.name}}</button>
+            <a href=""  class="btn btn-outline-{{categorie.color}} m-1">{{categorie.name}}</a>
+
         {% endfor %}
     </div>
 
