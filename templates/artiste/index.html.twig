@@ -17,8 +17,9 @@
         <div class="card border-{{artiste.category.color}} mb-3" >
             <div class="card-body">
                 <div class="card-header text-end">
-                <span class="badge rounded-pill bg-{{artiste.concert ?'secondary' : 'primary'}}">
-                {{artiste.concert ? 'Music de rue' : 'Concert' }}</span></div>
+                    <span class="badge rounded-pill bg-{{artiste.concert ?'secondary' : 'primary'}}">
+                    {{artiste.concert ? 'Music de rue' : 'Concert' }}</span>
+                </div>
                 <h4 class="card-title">DJ {{artiste.name}}</h4>
                 <p class="card-text">{{artiste.description | slice(1, 100)}}</p>
                 <p><a href="#">Découvrir l'artiste</a></p>
