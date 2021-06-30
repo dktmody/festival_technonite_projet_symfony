@@ -1,39 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArtisteController!
+{% block title %}DJ {{artiste.name}}
+
 {% endblock %}
 
 {% block body %}
-	<div class="d-flex justify-content-center mt-5 mb-5">
-		{% for categorie in categories %}
-			<button type="button" class="btn btn-outline-{{categorie.color}} m-1">{{categorie.name}}</button>
-		{% endfor %}
-	</div>
-
-	<div class="row">
-
-		{% for artiste in artistes %}
-
-			<div class="col-4">
-				<div class="card border-{{artiste.category.color}} mb-3">
-					<div class="card-body">
-						<div class="card-header text-end">
-							<span class="badge rounded-pill bg-{{artiste.concert ?'secondary' : 'primary'}}">
-								{{artiste.concert ? 'Music de rue' : 'Concert' }}</span>
-						</div>
-						<h4 class="card-title">DJ
-							{{artiste.name}}</h4>
-						<p class="card-text">{{artiste.description | slice(1, 100)}}</p>
-						<p>
-							<a href="#">Découvrir l'artiste</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		{% endfor %}
-
-
-	</div>
-
+<div class="container">
+    <div class="card border-primary my-5" >
+        <div class="card-body">
+            <h4 class="card-title">{{artiste.name}}</h4>
+            <p class="card-text">{{artiste.description}}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

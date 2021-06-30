@@ -22,7 +22,11 @@
                 </div>
                 <h4 class="card-title">DJ {{artiste.name}}</h4>
                 <p class="card-text">{{artiste.description | slice(1, 100)}}</p>
-                <p><a href="#">Découvrir l'artiste</a></p>
+                <p>
+                <a href="{{path('artiste_view', {id:artiste.id} )}}">Découvrir l'artiste</a>
+
+                </p>
+
             </div>
         </div>  
      </div>
