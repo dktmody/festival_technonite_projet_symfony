@@ -19,6 +19,20 @@ class ArtisteRepository extends ServiceEntityRepository
         parent::__construct($registry, Artiste::class);
     }
 
+    public function findArtistesForCategory($id): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Artiste p
+            WHERE p.category ='.$id.'
+            '
+        );
+        
+        return $query->getResult();
+    }
+
     // /**
     //  * @return Artiste[] Returns an array of Artiste objects
     //  */
@@ -47,4 +61,5 @@ class ArtisteRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }
