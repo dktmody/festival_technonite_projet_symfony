@@ -30,8 +30,6 @@ class ArtisteController extends AbstractController
         foreach($categories as $category){
             $category->color = $categoryColorName[$category->getName()];
         }
-        
-        // dd($categories);
         return $this->render('artiste/index.html.twig', [
             'categories' => $categories,
             'artistes' => $artistes,
