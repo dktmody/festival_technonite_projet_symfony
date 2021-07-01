@@ -14,10 +14,11 @@
 	</thead>
 	<tbody>
         {% for i in artistes %}
+
                 <tr>
-                    <th>20/08/2021</th>
-                    <td>16h-18h</td>
-                    <td>DJ {{i.name}} </td>
+					<th>2{{i.concert ?'0' : '1'}}/08/2021</th>
+					<td>{{i.concert ?'16h-18h' : '20h-22'}}</td>
+			        <td>DJ {{i.name}} </td>
                     <td class="btn btn-primary btn-sm">Réserver une place</td>
                 </tr>	
         {% endfor %}
